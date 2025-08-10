@@ -1,0 +1,1874 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Poster DZ - Boutique Algérienne de Posters Anime Premium</title>
+  <meta name="description" content="Posters anime haute qualité en Algérie. Demon Slayer, Jujutsu Kaisen, One Piece, Naruto et plus. Livraison rapide, prix compétitifs.">
+  <style>
+    :root {
+      --primary: #ff6b6b;
+      --primary-hover: #ff5252;
+      --secondary: #48dbfb;
+      --dark: #1a1a2e;
+      --darker: #16213e;
+      --light: #f1f1f1;
+      --gray: #888;
+      --success: #2ecc71;
+      --warning: #f39c12;
+      --error: #e74c3c;
+      
+      /* Anime Colors */
+      --demon-slayer: #ff2e63;
+      --jujutsu: #6a2c70;
+      --one-piece: #ff9e00;
+      --hunter-x: #00b894;
+      --dragon-ball: #ff5722;
+      --solo-leveling: #9c27b0;
+      --fire-force: #f39c12;
+      --chainsaw-man: #e74c3c;
+      --attack-titan: #34495e;
+      --naruto: #f7a400;
+      --chainsaw-blood: #cc0000;
+    }
+
+    /* Base Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    }
+
+    @font-face {
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 400;
+      src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+    }
+
+    body {
+      background: #0f0f1b;
+      color: var(--light);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, var(--dark), #000);
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.7);
+    }
+
+    .header-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .logo {
+      font-size: 2.2rem;
+      font-weight: 700;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 0 15px rgba(255,107,107,0.3);
+    }
+
+    .tagline {
+      color: var(--secondary);
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    /* Navigation */
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 1400px;
+    }
+
+    .cart-icon {
+      position: relative;
+      cursor: pointer;
+      font-size: 1.5rem;
+      color: var(--light);
+    }
+
+    .cart-count {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      background: var(--primary);
+      color: black;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: bold;
+    }
+
+    .search-bar {
+      width: 100%;
+      max-width: 500px;
+      margin: 0.5rem 0;
+    }
+
+    .search-bar input {
+      padding: 0.75rem 1.25rem;
+      width: 100%;
+      border: none;
+      border-radius: 2rem;
+      font-size: 1rem;
+      background: rgba(255,255,255,0.1);
+      color: var(--light);
+      transition: all 0.3s ease;
+    }
+
+    .search-bar input:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px var(--primary);
+      background: rgba(255,255,255,0.2);
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 70vh;
+      min-height: 500px;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                  url('https://i.pinimg.com/736x/ba/e8/9b/bae89b2f8712ccaae59dcc0acc1caa56.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 1.5rem;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      animation: fadeInUp 0.8s ease;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      color: white;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-button {
+      background: var(--primary);
+      color: black;
+      padding: 1rem 2rem;
+      border-radius: 2rem;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      display: inline-block;
+      box-shadow: 0 4px 15px rgba(255,107,107,0.3);
+    }
+
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(255,107,107,0.4);
+      background: var(--primary-hover);
+    }
+
+    /* Categories */
+    .categories {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      padding: 1.25rem;
+      flex-wrap: wrap;
+      background: rgba(0,0,0,0.3);
+      position: sticky;
+      top: 82px;
+      z-index: 900;
+      backdrop-filter: blur(5px);
+    }
+
+    .category-btn {
+      padding: 0.6rem 1.25rem;
+      border-radius: 2rem;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+      text-transform: capitalize;
+    }
+
+    .category-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .category-btn.active {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    /* Products Section */
+    .products-section {
+      padding: 3rem 1.5rem;
+      flex: 1;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      font-size: 2.2rem;
+      position: relative;
+      display: inline-block;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      border-radius: 3px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .product {
+      background: var(--darker);
+      border-radius: 1rem;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      position: relative;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .product:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+    }
+
+    .product-badge {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      color: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 1rem;
+      font-size: 0.75rem;
+      font-weight: bold;
+      z-index: 2;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .product-img-container {
+      height: 380px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .product-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .product:hover .product-img {
+      transform: scale(1.1);
+    }
+
+    .product-info {
+      padding: 1.5rem;
+    }
+
+    .product h3 {
+      color: var(--primary);
+      margin: 0.5rem 0;
+      font-size: 1.3rem;
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .price {
+      color: var(--secondary);
+      font-weight: bold;
+      margin: 1rem 0;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .original-price {
+      text-decoration: line-through;
+      color: var(--gray);
+      font-size: 0.9rem;
+    }
+
+    .discount {
+      background: var(--success);
+      color: white;
+      padding: 0.2rem 0.5rem;
+      border-radius: 0.3rem;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+
+    .product-actions {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+
+    .btn {
+      padding: 0.75rem;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      font-weight: 600;
+      flex: 1;
+      text-align: center;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: black;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255,107,107,0.3);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.1);
+      color: var(--light);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.2);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    /* Badge Colors */
+    .badge-demon-slayer { background: var(--demon-slayer); }
+    .badge-jujutsu { background: var(--jujutsu); }
+    .badge-one-piece { background: var(--one-piece); }
+    .badge-hunter-x { background: var(--hunter-x); }
+    .badge-dragon-ball { background: var(--dragon-ball); }
+    .badge-solo-leveling { background: var(--solo-leveling); }
+    .badge-fire-force { background: var(--fire-force); }
+    .badge-chainsaw-man { background: var(--chainsaw-man); }
+    .badge-attack-titan { background: var(--attack-titan); }
+    .badge-naruto { background: var(--naruto); }
+    
+    /* Badges spéciaux */
+    .product-badge.limited {
+      background: linear-gradient(45deg, #f7a400, #ff6b6b);
+      animation: shimmer 2s infinite;
+    }
+
+    .mature { 
+      background: var(--error);
+      top: auto;
+      bottom: 1rem;
+    }
+
+    .popular-tag {
+      color: var(--warning);
+      font-size: 0.7rem;
+      font-weight: bold;
+    }
+
+    @keyframes shimmer {
+      0% { opacity: 0.8; }
+      50% { opacity: 1; }
+      100% { opacity: 0.8; }
+    }
+
+    /* Category Button Colors */
+    .category-demon-slayer { background: var(--demon-slayer); }
+    .category-jujutsu { background: var(--jujutsu); }
+    .category-one-piece { background: var(--one-piece); }
+    .category-hunter-x { background: var(--hunter-x); }
+    .category-dragon-ball { background: var(--dragon-ball); }
+    .category-solo-leveling { background: var(--solo-leveling); }
+    .category-fire-force { background: var(--fire-force); }
+    .category-chainsaw-man { background: var(--chainsaw-blood); }
+    .category-attack-titan { background: var(--attack-titan); }
+    .category-naruto { background: var(--naruto); }
+    .category-all { background: var(--gray); }
+
+    /* Modal Styles */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.95);
+      z-index: 2000;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      display: flex;
+    }
+
+    .modal-container {
+      background: var(--darker);
+      border-radius: 1rem;
+      padding: 2rem;
+      max-width: 900px;
+      width: 100%;
+      max-height: 90vh;
+      overflow: auto;
+      animation: modalFadeIn 0.4s ease;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    @keyframes modalFadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-bottom: 1rem;
+    }
+
+    .modal-header::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: rgba(255,255,255,0.1);
+    }
+
+    .modal-title {
+      color: var(--primary);
+      margin: 0;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    .modal-close {
+      background: var(--primary);
+      color: black;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+
+    .modal-close:hover {
+      transform: rotate(90deg);
+      background: var(--primary-hover);
+    }
+
+    .modal-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .modal-gallery {
+      position: relative;
+    }
+
+    .modal-main-image {
+      width: 100%;
+      border-radius: 0.75rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+      aspect-ratio: 2/3;
+      object-fit: cover;
+    }
+
+    .modal-details {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .modal-description {
+      margin-bottom: 1.5rem;
+      color: var(--gray);
+      line-height: 1.7;
+    }
+
+    .size-options {
+      display: flex;
+      gap: 0.75rem;
+      margin: 1.5rem 0;
+      flex-wrap: wrap;
+    }
+
+    .size-btn {
+      padding: 0.6rem 1rem;
+      border: 1px solid var(--primary);
+      background: transparent;
+      color: var(--light);
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+      min-width: 80px;
+      text-align: center;
+    }
+
+    .size-btn:hover {
+      background: rgba(255,107,107,0.2);
+    }
+
+    .size-btn.active {
+      background: var(--primary);
+      color: black;
+      font-weight: bold;
+    }
+
+    .size-info {
+      display: block;
+      font-size: 0.8rem;
+      margin-top: 0.2rem;
+      color: var(--gray);
+    }
+
+    .modal-price {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--secondary);
+      margin: 1rem 0;
+    }
+
+    .modal-add-to-cart {
+      background: var(--primary);
+      color: black;
+      border: none;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+      transition: all 0.3s ease;
+      margin-top: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .modal-add-to-cart:hover {
+      background: var(--primary-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 20px rgba(255,107,107,0.4);
+    }
+
+    /* Cart Sidebar */
+    .cart-sidebar {
+      position: fixed;
+      top: 0;
+      right: -400px;
+      width: 100%;
+      max-width: 400px;
+      height: 100vh;
+      background: var(--darker);
+      z-index: 2000;
+      transition: right 0.3s ease;
+      box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cart-sidebar.active {
+      right: 0;
+    }
+
+    .cart-header {
+      padding: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .cart-title {
+      font-size: 1.5rem;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .cart-close {
+      background: transparent;
+      color: var(--light);
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .cart-close:hover {
+      color: var(--primary);
+      transform: rotate(90deg);
+    }
+
+    .cart-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1.5rem;
+    }
+
+    .cart-items {
+      margin-bottom: 1.5rem;
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .cart-item:hover {
+      background: rgba(255,255,255,0.05);
+    }
+
+    .cart-item-info {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-align: left;
+      flex: 1;
+    }
+
+    .cart-item-img {
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      border-radius: 0.5rem;
+    }
+
+    .cart-item-details {
+      flex: 1;
+    }
+
+    .cart-item-title {
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      font-size: 1rem;
+    }
+
+    .cart-item-price {
+      color: var(--secondary);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .cart-item-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .quantity-control {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255,255,255,0.1);
+      border-radius: 0.5rem;
+      padding: 0.3rem;
+    }
+
+    .quantity-btn {
+      background: transparent;
+      color: var(--light);
+      border: none;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .quantity-btn:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+    .quantity {
+      min-width: 20px;
+      text-align: center;
+    }
+
+    .remove-btn {
+      background: var(--error);
+      color: white;
+      border: none;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .remove-btn:hover {
+      transform: scale(1.1);
+    }
+
+    .cart-footer {
+      padding: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .cart-total {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.3rem;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+
+    .checkout {
+      background: var(--primary);
+      color: black;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .checkout:hover {
+      background: var(--primary-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255,107,107,0.3);
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.7);
+      z-index: 1500;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    /* Notification */
+    .notification {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      background: var(--primary);
+      color: black;
+      padding: 1rem 1.5rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s ease;
+      z-index: 2000;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .notification.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .notification.success {
+      background: var(--success);
+      color: white;
+    }
+
+    .notification.error {
+      background: var(--error);
+      color: white;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark);
+      padding: 3rem 1.5rem 1.5rem;
+      text-align: center;
+      margin-top: auto;
+    }
+
+    .footer-container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+      text-align: left;
+    }
+
+    .footer-column h3 {
+      color: var(--primary);
+      margin-bottom: 1.25rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      position: relative;
+      display: inline-block;
+    }
+
+    .footer-column h3::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 50%;
+      height: 2px;
+      background: var(--primary);
+    }
+
+    .footer-column p {
+      margin-bottom: 0.75rem;
+      color: var(--gray);
+    }
+
+    .footer-column a {
+      color: var(--secondary);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-column a:hover {
+      color: var(--primary);
+      transform: translateX(5px);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .social-link {
+      color: var(--light);
+      background: rgba(255,255,255,0.1);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .social-link:hover {
+      background: var(--primary);
+      color: black;
+      transform: translateY(-3px);
+    }
+
+    .copyright {
+      color: var(--gray);
+      font-size: 0.9rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* Loading Spinner */
+    .spinner {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 3px solid rgba(255,255,255,0.3);
+      border-radius: 50%;
+      border-top-color: var(--light);
+      animation: spin 1s ease-in-out infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* Responsive */
+    @media (max-width: 1200px) {
+      .modal-content {
+        grid-template-columns: 1fr;
+      }
+      
+      .modal-gallery {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+      
+      .cart-sidebar {
+        max-width: 350px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .products {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      }
+      
+      .hero {
+        height: 60vh;
+        min-height: 400px;
+      }
+      
+      .hero h1 {
+        font-size: 2rem;
+      }
+      
+      .section-title {
+        font-size: 1.8rem;
+      }
+      
+      .categories {
+        top: 76px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .header-container {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      
+      .logo {
+        font-size: 1.8rem;
+      }
+      
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      
+      .hero p {
+        font-size: 1rem;
+      }
+      
+      .category-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+      }
+      
+      .modal-container {
+        padding: 1.5rem;
+      }
+      
+      .modal-title {
+        font-size: 1.4rem;
+      }
+      
+      .cart-sidebar {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .products {
+        grid-template-columns: 1fr;
+      }
+      
+      .product-actions {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <div class="nav-container">
+      <div class="logo">Poster DZ</div>
+      <div class="cart-icon" id="cartIcon">
+        🛒
+        <span class="cart-count" id="cartCount">0</span>
+      </div>
+    </div>
+    <div class="tagline">La meilleure collection de posters anime en Algérie</div>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Rechercher un poster...">
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Découvrez des posters anime exclusifs</h1>
+    <p>Posters haute qualité disponibles en différentes tailles. Livraison rapide dans toute l'Algérie.</p>
+    <a href="#products" class="cta-button">Explorer la collection</a>
+  </div>
+</section>
+
+<section class="categories">
+  <button class="category-btn category-all active" data-category="all">Tous</button>
+  <button class="category-btn category-demon-slayer" data-category="demon-slayer">Demon Slayer</button>
+  <button class="category-btn category-jujutsu" data-category="jujutsu">Jujutsu Kaisen</button>
+  <button class="category-btn category-one-piece" data-category="one-piece">One Piece</button>
+  <button class="category-btn category-hunter-x" data-category="hunter-x">Hunter x Hunter</button>
+  <button class="category-btn category-dragon-ball" data-category="dragon-ball">Dragon Ball</button>
+  <button class="category-btn category-solo-leveling" data-category="solo-leveling">Solo Leveling</button>
+  <button class="category-btn category-fire-force" data-category="fire-force">Fire Force</button>
+  <button class="category-btn category-chainsaw-man" data-category="chainsaw-man">Chainsaw Man</button>
+  <button class="category-btn category-naruto" data-category="naruto">Naruto</button>
+</section>
+
+<section id="products" class="products-section">
+  <div class="container">
+    <h2 class="section-title">Nos Posters Premium</h2>
+    <div class="products" id="productList">
+      <!-- Produits chargés dynamiquement -->
+    </div>
+  </div>
+</section>
+
+<!-- Product Modal -->
+<div class="modal-overlay" id="productModal">
+  <div class="modal-container">
+    <div class="modal-header">
+      <h2 class="modal-title" id="modalProductTitle"></h2>
+      <button class="modal-close" onclick="closeModal()">×</button>
+    </div>
+    <div class="modal-content">
+      <div class="modal-gallery">
+        <img id="modalMainImage" src="" alt="Poster" class="modal-main-image">
+      </div>
+      <div class="modal-details">
+        <p class="modal-description" id="modalDescription"></p>
+        <div class="size-options" id="sizeOptions">
+          <!-- Tailles chargées dynamiquement -->
+        </div>
+        <div class="modal-price" id="modalPrice"></div>
+        <button class="modal-add-to-cart" onclick="addToCartFromModal()">
+          <span id="addToCartText">Ajouter au panier</span>
+          <span class="spinner" id="addToCartSpinner" style="display: none;"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Cart Sidebar -->
+<div class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header">
+    <h3 class="cart-title">Votre Panier</h3>
+    <button class="cart-close" id="cartClose">×</button>
+  </div>
+  <div class="cart-body">
+    <div class="cart-items" id="cartItems">
+      <div class="empty-cart">Votre panier est vide</div>
+    </div>
+  </div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span>Total:</span>
+      <span id="totalPrice">0 DZD</span>
+    </div>
+    <button class="checkout" id="checkoutBtn">
+      <span>Commander via WhatsApp</span>
+      <span class="spinner" id="checkoutSpinner" style="display: none;"></span>
+    </button>
+  </div>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+<div class="notification" id="notification">
+  <span id="notificationIcon">✓</span>
+  <span id="notificationText">Produit ajouté au panier !</span>
+</div>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>À propos</h3>
+        <p>Poster DZ est la première boutique algérienne spécialisée dans les posters anime de haute qualité.</p>
+        <p>Nous proposons des designs exclusifs et des produits officiels.</p>
+      </div>
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <p><a href="https://wa.me/213552091874">WhatsApp: +213 552 091 874</a></p>
+        <p><a href="mailto:contact@posterdz.dz">Email: contact@posterdz.dz</a></p>
+        <div class="social-links">
+          <a href="#" class="social-link">FB</a>
+          <a href="#" class="social-link">IG</a>
+          <a href="#" class="social-link">TIK</a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h3>Livraison</h3>
+        <p>Livraison dans toute l'Algérie</p>
+        <p>Délai: 2-5 jours ouvrables</p>
+        <p>Frais de port: 300 DZD</p>
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; 2023 Poster DZ. Tous droits réservés.
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Base de données des produits améliorée
+  const PRODUCTS = [
+    {
+      id: 'hunter-gon',
+      name: 'Gon Freecss',
+      series: 'Hunter x Hunter',
+      price: 2200,
+      originalPrice: 2800,
+      category: 'hunter-x',
+      image: 'https://i.pinimg.com/736x/41/7c/bb/417cbb7174fe53a4804bb22c822fa12e.jpg',
+      description: 'Poster officiel de Gon Freecss, le protagoniste déterminé de Hunter x Hunter.',
+      sizes: {
+        'S': { price: 2200, dimensions: '21x30cm' },
+        'M': { price: 3200, dimensions: '30x42cm' },
+        'L': { price: 4200, dimensions: '50x70cm' }
+      },
+      tags: ['shonen', 'aventure']
+    },
+    {
+      id: 'demon-zenitsu',
+      name: 'Zenitsu Agatsuma',
+      series: 'Demon Slayer',
+      price: 2100,
+      originalPrice: 2600,
+      category: 'demon-slayer',
+      image: 'https://i.pinimg.com/1200x/0c/a7/47/0ca747a78f179a02515f89ff8c84f1b3.jpg',
+      description: 'Poster dynamique de Zenitsu montrant sa technique d\'éclair.',
+      sizes: {
+        'S': { price: 2100, dimensions: '21x30cm' },
+        'M': { price: 3100, dimensions: '30x42cm' },
+        'L': { price: 4100, dimensions: '50x70cm' }
+      },
+      tags: ['action', 'supernaturel']
+    },
+    {
+      id: 'solo-jinwoo',
+      name: 'Sung Jin-Woo',
+      series: 'Solo Leveling',
+      price: 2500,
+      originalPrice: 3000,
+      category: 'solo-leveling',
+      image: 'https://i.pinimg.com/736x/11/19/40/1119402b851aa698183e9f1de5d033eb.jpg',
+      description: 'Poster emblématique du Chasseur Solitaire dans sa forme la plus puissante.',
+      sizes: {
+        'S': { price: 2500, dimensions: '21x30cm' },
+        'M': { price: 3500, dimensions: '30x42cm' },
+        'L': { price: 4500, dimensions: '50x70cm' }
+      },
+      tags: ['action', 'fantasy']
+    },
+    {
+      id: 'fire-benimaru',
+      name: 'Benimaru Shinmon',
+      series: 'Fire Force',
+      price: 2300,
+      originalPrice: 2900,
+      category: 'fire-force',
+      image: 'https://i.pinimg.com/736x/82/b1/20/82b1205e4f53bde1f082fda9d055ace3.jpg',
+      description: 'Poster du capitaine de la 7ème compagnie dans une pose caractéristique.',
+      sizes: {
+        'S': { price: 2300, dimensions: '21x30cm' },
+        'M': { price: 3300, dimensions: '30x42cm' },
+        'L': { price: 4300, dimensions: '50x70cm' }
+      },
+      tags: ['action', 'superpouvoirs']
+    },
+    {
+      id: 'demon-tanjiro',
+      name: 'Tanjiro Kamado',
+      series: 'Demon Slayer',
+      price: 2000,
+      originalPrice: 2500,
+      category: 'demon-slayer',
+      image: 'https://i.pinimg.com/736x/e3/b4/ae/e3b4ae883acd9467289c8d61d22786e4.jpg',
+      description: 'Poster du héros déterminé avec son sabre et son masque de protection.',
+      sizes: {
+        'S': { price: 2000, dimensions: '21x30cm' },
+        'M': { price: 3000, dimensions: '30x42cm' },
+        'L': { price: 4000, dimensions: '50x70cm' }
+      },
+      tags: ['action', 'drame']
+    },
+    {
+      id: 'jujutsu-sukuna',
+      name: 'Ryomen Sukuna',
+      series: 'Jujutsu Kaisen',
+      price: 2100,
+      originalPrice: 2700,
+      category: 'jujutsu',
+      image: 'https://i.pinimg.com/736x/0e/c2/81/0ec28111b4f44078679af2946164b2e3.jpg',
+      description: 'Poster menaçant du Roi des Malédictions dans toute sa gloire.',
+      sizes: {
+        'S': { price: 2100, dimensions: '21x30cm' },
+        'M': { price: 3100, dimensions: '30x42cm' },
+        'L': { price: 4100, dimensions: '50x70cm' }
+      },
+      tags: ['horreur', 'action']
+    },
+    {
+      id: 'db-goku-vegeta',
+      name: 'Goku & Vegeta',
+      series: 'Dragon Ball',
+      price: 2600,
+      originalPrice: 3200,
+      category: 'dragon-ball',
+      image: 'https://i.pinimg.com/736x/af/f2/a8/aff2a8f3b60f6dfb9d0fea03c2ca6001.jpg',
+      description: 'Poster iconique des deux rivaux légendaires côte à côte.',
+      sizes: {
+        'S': { price: 2600, dimensions: '21x30cm' },
+        'M': { price: 3600, dimensions: '30x42cm' },
+        'L': { price: 4600, dimensions: '50x70cm' }
+      },
+      tags: ['shonen', 'action']
+    },
+    {
+      id: 'one-piece-ace',
+      name: 'Portgas D. Ace',
+      series: 'One Piece',
+      price: 2400,
+      originalPrice: 3000,
+      category: 'one-piece',
+      image: 'https://i.pinimg.com/736x/51/80/f6/5180f64c4dbbd9974c89f2f1700ed1eb.jpg',
+      description: 'Poster émouvant du frère de Luffy avec ses pouvoirs de Flamme.',
+      sizes: {
+        'S': { price: 2400, dimensions: '21x30cm' },
+        'M': { price: 3400, dimensions: '30x42cm' },
+        'L': { price: 4400, dimensions: '50x70cm' }
+      },
+      tags: ['aventure', 'action']
+    },
+    
+    {
+      id: 'Levi Ackerman',
+      name: 'Levi Ackerman',
+      series: 'attack-titan',
+      price: 2700,
+      originalPrice: 3300,
+      category: 'attack-titan',
+      image: 'https://i.pinimg.com/736x/50/9e/39/509e39546d7c4c39a170e79a46f5f5db.jpg',
+      description: 'Édition spéciale Liva du poster de Naruto en mode Sage avec des effets de texture premium.',
+      sizes: {
+        'S': { price: 2700, dimensions: '21x30cm' },
+        'M': { price: 3700, dimensions: '30x42cm' },
+        'L': { price: 4700, dimensions: '50x70cm', isPopular: true }
+      },
+      tags: ['shonen', 'ninja', 'limited-edition'],
+      isLimited: true
+    },
+    {
+      id: 'denji-chainsaw-bloody',
+      name: 'Denji (Transformation Sanglante)',
+      series: 'Chainsaw Man',
+      price: 2600,
+      originalPrice: 3100,
+      category: 'chainsaw-man',
+      image: 'https://i.pinimg.com/736x/d6/2a/a5/d62aa598499fb3355b3b893a3823b3b4.jpg',
+      description: 'Poster intense de Denji dans sa transformation Chainsaw Man avec effet sanglant réaliste. Réservé aux vrais fans!',
+      sizes: {
+        'S': { price: 2600, dimensions: '21x30cm' },
+        'M': { price: 3600, dimensions: '30x42cm', isPopular: true },
+        'L': { price: 4600, dimensions: '50x70cm' },
+        'XL': { price: 5600, dimensions: '61x91cm' }
+      },
+      tags: ['horreur', 'action', 'mature'],
+      ageRestriction: '16+'
+    }
+  ];
+
+  // État de l'application
+  const state = {
+    cart: JSON.parse(localStorage.getItem('cart')) || [],
+    currentProduct: null,
+    selectedSize: 'S',
+    isLoading: false
+  };
+
+  // Initialisation
+  document.addEventListener('DOMContentLoaded', () => {
+    renderProducts();
+    renderCart();
+    setupEventListeners();
+    updateCartCount();
+  });
+
+  // Rendu des produits
+  function renderProducts() {
+    const container = document.getElementById('productList');
+    
+    if (!container) return;
+    
+    container.innerHTML = PRODUCTS.map(product => {
+      const discount = Math.round(100 - (product.price / product.originalPrice * 100));
+      
+      let badgesHTML = '';
+      
+      // Badge de série
+      badgesHTML += `<div class="product-badge badge-${product.category}">${product.series}</div>`;
+      
+      // Badge de réduction
+      if (discount > 0) {
+        badgesHTML += `<div class="product-badge">-${discount}%</div>`;
+      }
+      
+      // Badge d'édition limitée
+      if (product.isLimited) {
+        badgesHTML += `<div class="product-badge limited">LIMITED</div>`;
+      }
+      
+      // Badge d'avertissement d'âge
+      if (product.ageRestriction) {
+        badgesHTML += `<div class="product-badge mature">${product.ageRestriction}</div>`;
+      }
+      
+      return `
+        <div class="product" data-id="${product.id}" data-category="${product.category}" data-tags="${product.tags.join(',')}">
+          ${badgesHTML}
+          <div class="product-img-container">
+            <img src="${product.image}" alt="${product.name} - ${product.series}" class="product-img" loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/300x400?text=Image+Non+Disponible'">
+          </div>
+          <div class="product-info">
+            <h3>${product.name}</h3>
+            <div class="price">
+              ${product.price} DZD
+              ${discount > 0 ? `<span class="original-price">${product.originalPrice} DZD</span>` : ''}
+            </div>
+            <div class="product-actions">
+              <button class="btn btn-primary" onclick="addToCart('${product.id}')">
+                <span>Ajouter</span>
+              </button>
+              <button class="btn btn-secondary" onclick="openProductModal('${product.id}')">
+                <span>Détails</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  // Ouvrir la modal des détails
+  function openProductModal(productId) {
+    state.currentProduct = PRODUCTS.find(p => p.id === productId);
+    if (!state.currentProduct) return;
+
+    document.getElementById('modalProductTitle').textContent = 
+      `${state.currentProduct.name} - ${state.currentProduct.series}`;
+      
+    document.getElementById('modalDescription').textContent = 
+      state.currentProduct.description;
+      
+    const img = document.getElementById('modalMainImage');
+    img.src = state.currentProduct.image;
+    img.alt = `${state.currentProduct.name} - ${state.currentProduct.series}`;
+
+    const sizeOptions = document.getElementById('sizeOptions');
+    sizeOptions.innerHTML = '';
+    
+    Object.entries(state.currentProduct.sizes).forEach(([size, details]) => {
+      const sizeBtn = document.createElement('button');
+      sizeBtn.className = 'size-btn';
+      
+      let sizeHTML = `${size} <span class="size-info">${details.dimensions}</span>`;
+      sizeHTML += `<br>${details.price} DZD`;
+      
+      if (details.isPopular) {
+        sizeHTML += ' <span class="popular-tag">★ Populaire</span>';
+      }
+      
+      sizeBtn.innerHTML = sizeHTML;
+      
+      sizeBtn.onclick = () => {
+        document.querySelectorAll('.size-btn').forEach(btn => btn.classList.remove('active'));
+        sizeBtn.classList.add('active');
+        state.selectedSize = size;
+        updateModalPrice();
+      };
+      
+      sizeOptions.appendChild(sizeBtn);
+      
+      if (size === state.selectedSize) {
+        sizeBtn.classList.add('active');
+      }
+    });
+
+    updateModalPrice();
+    toggleModal(true);
+  }
+
+  function updateModalPrice() {
+    if (!state.currentProduct) return;
+    
+    const sizeDetails = state.currentProduct.sizes[state.selectedSize];
+    document.getElementById('modalPrice').textContent = `${sizeDetails.price} DZD`;
+  }
+
+  // Gérer la modal
+  function toggleModal(show) {
+    const modal = document.getElementById('productModal');
+    if (show) {
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    } else {
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+  }
+
+  function closeModal() {
+    toggleModal(false);
+  }
+
+  // Gérer le panier latéral
+  function toggleCart(show) {
+    const cart = document.getElementById('cartSidebar');
+    const overlay = document.getElementById('overlay');
+    
+    if (show) {
+      cart.classList.add('active');
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    } else {
+      cart.classList.remove('active');
+      overlay.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+  }
+
+  // Ajouter au panier depuis la modal
+  async function addToCartFromModal() {
+    if (!state.currentProduct || state.isLoading) return;
+    
+    const sizeDetails = state.currentProduct.sizes[state.selectedSize];
+    const productName = `${state.currentProduct.name} (${state.selectedSize}) - ${state.currentProduct.series}`;
+    
+    try {
+      state.isLoading = true;
+      toggleLoading('addToCart', true);
+      
+      await addToCartDirect(
+        productName, 
+        sizeDetails.price, 
+        state.currentProduct.image,
+        state.currentProduct.id,
+        state.selectedSize
+      );
+      
+      showNotification('Produit ajouté au panier !', 'success');
+      closeModal();
+    } catch (error) {
+      showNotification('Erreur lors de l\'ajout', 'error');
+      console.error(error);
+    } finally {
+      state.isLoading = false;
+      toggleLoading('addToCart', false);
+    }
+  }
+
+  // Ajouter au panier directement
+  async function addToCart(productId) {
+    if (state.isLoading) return;
+    
+    const product = PRODUCTS.find(p => p.id === productId);
+    if (!product) return;
+    
+    const productName = `${product.name} (S) - ${product.series}`;
+    
+    try {
+      state.isLoading = true;
+      
+      await addToCartDirect(
+        productName, 
+        product.price, 
+        product.image,
+        product.id,
+        'S'
+      );
+      
+      showNotification('Produit ajouté au panier !', 'success');
+    } catch (error) {
+      showNotification('Erreur lors de l\'ajout', 'error');
+      console.error(error);
+    } finally {
+      state.isLoading = false;
+    }
+  }
+
+  // Fonction d'ajout générique
+  function addToCartDirect(name, price, image, productId, size) {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        const existingItem = state.cart.find(item => 
+          item.name === name && item.size === size
+        );
+        
+        if (existingItem) {
+          existingItem.quantity++;
+        } else {
+          state.cart.push({ 
+            name, 
+            price, 
+            image, 
+            productId,
+            size,
+            quantity: 1 
+          });
+        }
+        
+        saveCart();
+        renderCart();
+        updateCartCount();
+        resolve();
+      }, 500); // Simuler un délai réseau
+    });
+  }
+
+  // Afficher une notification
+  function showNotification(message, type = 'default') {
+    const notification = document.getElementById('notification');
+    const icon = document.getElementById('notificationIcon');
+    const text = document.getElementById('notificationText');
+    
+    if (!notification || !icon || !text) return;
+    
+    // Configurer en fonction du type
+    notification.className = 'notification';
+    if (type === 'success') {
+      notification.classList.add('success');
+      icon.textContent = '✓';
+    } else if (type === 'error') {
+      notification.classList.add('error');
+      icon.textContent = '!';
+    }
+    
+    text.textContent = message;
+    notification.classList.add('show');
+    
+    setTimeout(() => {
+      notification.classList.remove('show');
+    }, 3000);
+  }
+
+  // Rendu du panier
+  function renderCart() {
+    const container = document.getElementById('cartItems');
+    const totalElement = document.getElementById('totalPrice');
+    
+    if (!container || !totalElement) return;
+    
+    if (state.cart.length === 0) {
+      container.innerHTML = '<div class="empty-cart">Votre panier est vide</div>';
+      totalElement.textContent = '0 DZD';
+      return;
+    }
+    
+    container.innerHTML = state.cart.map((item, index) => `
+      <div class="cart-item">
+        <div class="cart-item-info">
+          <img src="${item.image}" alt="${item.name}" class="cart-item-img" 
+               onerror="this.src='https://via.placeholder.com/100x100?text=Image'">
+          <div class="cart-item-details">
+            <div class="cart-item-title">${item.name}</div>
+            <div class="cart-item-price">${item.price} DZD</div>
+          </div>
+        </div>
+        <div class="cart-item-actions">
+          <div class="quantity-control">
+            <button class="quantity-btn" onclick="updateQuantity(${index}, ${item.quantity - 1})">-</button>
+            <span class="quantity">${item.quantity}</span>
+            <button class="quantity-btn" onclick="updateQuantity(${index}, ${item.quantity + 1})">+</button>
+          </div>
+          <button class="remove-btn" onclick="removeFromCart(${index})">×</button>
+        </div>
+      </div>
+    `).join('');
+    
+    const total = calculateTotal();
+    totalElement.textContent = `${total} DZD`;
+  }
+
+  function calculateTotal() {
+    return state.cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+  }
+
+  // Mettre à jour la quantité
+  function updateQuantity(index, newQuantity) {
+    if (newQuantity < 1) {
+      removeFromCart(index);
+      return;
+    }
+    
+    state.cart[index].quantity = newQuantity;
+    saveCart();
+    renderCart();
+    updateCartCount();
+  }
+
+  // Retirer du panier
+  function removeFromCart(index) {
+    state.cart.splice(index, 1);
+    saveCart();
+    renderCart();
+    updateCartCount();
+    showNotification('Produit retiré du panier', 'error');
+  }
+
+  // Sauvegarder le panier
+  function saveCart() {
+    localStorage.setItem('cart', JSON.stringify(state.cart));
+  }
+
+  // Mettre à jour le compteur du panier
+  function updateCartCount() {
+    const countElement = document.getElementById('cartCount');
+    if (!countElement) return;
+    
+    const totalItems = state.cart.reduce((sum, item) => sum + item.quantity, 0);
+    countElement.textContent = totalItems;
+    countElement.style.display = totalItems > 0 ? 'flex' : 'none';
+  }
+
+  // Gérer l'affichage du chargement
+  function toggleLoading(elementId, isLoading) {
+    const textElement = document.getElementById(`${elementId}Text`);
+    const spinnerElement = document.getElementById(`${elementId}Spinner`);
+    
+    if (textElement) textElement.style.display = isLoading ? 'none' : 'inline';
+    if (spinnerElement) spinnerElement.style.display = isLoading ? 'inline-block' : 'none';
+  }
+
+  // Configuration des événements
+  function setupEventListeners() {
+    // Filtrage par catégorie
+    document.querySelectorAll('.category-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        const category = btn.dataset.category;
+        filterProducts(category);
+      });
+    });
+    
+    // Recherche
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const searchTerm = e.target.value.toLowerCase();
+        filterProducts(null, searchTerm);
+      });
+    }
+    
+    // Panier
+    const cartIcon = document.getElementById('cartIcon');
+    if (cartIcon) {
+      cartIcon.addEventListener('click', () => toggleCart(true));
+    }
+    
+    const cartClose = document.getElementById('cartClose');
+    if (cartClose) {
+      cartClose.addEventListener('click', () => toggleCart(false));
+    }
+    
+    const overlay = document.getElementById('overlay');
+    if (overlay) {
+      overlay.addEventListener('click', () => toggleCart(false));
+    }
+    
+    // Commande WhatsApp
+    const checkoutBtn = document.getElementById('checkoutBtn');
+    if (checkoutBtn) {
+      checkoutBtn.addEventListener('click', sendWhatsAppOrder);
+    }
+  }
+
+  // Filtrage des produits
+  function filterProducts(category = 'all', searchTerm = '') {
+    const products = document.querySelectorAll('.product');
+    
+    products.forEach(product => {
+      const productCategory = product.dataset.category;
+      const productTags = product.dataset.tags;
+      const productName = product.querySelector('h3').textContent.toLowerCase();
+      const productSeries = product.querySelector('.product-badge:not(:first-child)').textContent.toLowerCase();
+      
+      const matchesCategory = category === 'all' || productCategory === category;
+      const matchesSearch = searchTerm === '' || 
+        productName.includes(searchTerm) || 
+        productSeries.includes(searchTerm) ||
+        productTags.includes(searchTerm);
+      
+      product.style.display = matchesCategory && matchesSearch ? 'block' : 'none';
+    });
+  }
+
+  // Envoi de commande WhatsApp
+  async function sendWhatsAppOrder() {
+    if (state.cart.length === 0) {
+      showNotification('Votre panier est vide !', 'error');
+      return;
+    }
+    
+    try {
+      state.isLoading = true;
+      toggleLoading('checkout', true);
+      
+      const total = calculateTotal();
+      const itemsText = state.cart.map(item => 
+        `- ${item.quantity}x ${item.name}: ${item.price * item.quantity} DZD`
+      ).join('%0A');
+      
+      const message = `*Nouvelle commande Poster DZ*%0A%0A` +
+                     `📦 *Articles:*%0A${itemsText}%0A%0A` +
+                     `💰 *Total: ${total} DZD*%0A%0A` +
+                     `_Merci pour votre commande !_`;
+      
+      // Simuler un délai pour l'effet de chargement
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      window.open(`https://wa.me/213552091874?text=${encodeURIComponent(message)}`, '_blank');
+      
+      // Vider le panier après commande
+      state.cart = [];
+      saveCart();
+      renderCart();
+      updateCartCount();
+      toggleCart(false);
+      
+      showNotification('Commande envoyée avec succès !', 'success');
+    } catch (error) {
+      showNotification('Erreur lors de la commande', 'error');
+      console.error(error);
+    } finally {
+      state.isLoading = false;
+      toggleLoading('checkout', false);
+    }
+  }
+
+  // Exposer les fonctions globales
+  window.addToCart = addToCart;
+  window.openProductModal = openProductModal;
+  window.closeModal = closeModal;
+  window.addToCartFromModal = addToCartFromModal;
+  window.removeFromCart = removeFromCart;
+  window.updateQuantity = updateQuantity;
+</script>
+</body>
+</html>
